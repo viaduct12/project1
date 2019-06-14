@@ -6,7 +6,9 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:vue/essential"
+        "plugin:vue/essential",
+        'plugin:prettier/recommended',
+        '@vue/prettier'
     ],
     "globals": {
         "Atomics": "readonly",
