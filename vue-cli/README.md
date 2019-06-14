@@ -1,4 +1,4 @@
-# lmn-travel
+# vue-cli
 
 > A Vue.js project
 
