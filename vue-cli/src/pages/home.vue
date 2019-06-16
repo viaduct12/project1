@@ -1,27 +1,31 @@
 <template>
   <div id="home">
-<h1>{{msg}}</h1>
-<img src="../assets/Puerto-Rico.jpg">
+    <h1>{{msg}}</h1>
+    <h2>{{Time}}</h2>
+
+
+    <p>{{question}}</p>
+    <input type="text" value="">
+
 
 
 
   </div>
 </template>
 <script>
-export default {
-  name: 'home',
-  data (){
-    return {
+  export default {
+    name: 'home',
+    data() {
+      return {
 
-      imageLink: "../assets/Puerto-Rico.jpg",
-      msg: "Home Page"
+        msg: "Home Page",
+        question: "Where would you like to go?"
+      }
     }
   }
-}
+
 </script>
-<style>
-
-
-
+<style lang="scss">
+   
 
 </style>
