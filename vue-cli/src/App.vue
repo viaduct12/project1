@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <nav class=" navbar navbar-expand-lg fixed-top row">
 
       <!-- <router-link tag="li" class="col" class-active="active" to="/" exact>MAIN</router-link> -->
@@ -10,7 +10,7 @@
 
       <router-link tag="li" class="col" class-active="active" to="/things" exact>things</router-link>
       <router-link tag="li" class="col" class-active="active" to="/weather" exact>weather</router-link>
-
+<router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
     </nav>
 
     <router-view></router-view>
