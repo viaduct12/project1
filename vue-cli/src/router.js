@@ -5,6 +5,7 @@ import photo from "./pages/photo.vue";
 import prices from "./pages/prices.vue";
 import things from "./pages/things.vue";
 import weather from "./pages/weather.vue";
+import contact from "./pages/contact.vue";
 
 
 Vue.use(Router);
@@ -37,6 +38,11 @@ export default new Router({
       path: "/weather",
       name: "weather",
       component: weather
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: contact
     }
 
   ]
