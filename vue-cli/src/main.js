@@ -4,7 +4,9 @@ import router from "./router";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
-
+import VueDateFns from "vue-date-fns";
+ 
+Vue.use(VueDateFns);
 
 
 Vue.use(Vuex)

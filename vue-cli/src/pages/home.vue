@@ -1,7 +1,9 @@
 <template>
   <div id="home">
     <h1>{{msg}}</h1>
-    <h2>{{Time}}</h2>
+    <div>Now: {{ now }}</div>
+    <div>Now: {{ new Date() | date }}</div>
+    <div>Now: {{ $date(new Date()) }}</div>
 
 
     <p>{{question}}</p>
@@ -21,11 +23,20 @@
         msg: "Home Page",
         question: "Where would you like to go?"
       }
+    },
+    computed: {
+        now() {
+            return this.$date(new Date());
+        }
     }
   }
 
 </script>
 <style lang="scss">
-   
+
+
+
+
+
 
 </style>
