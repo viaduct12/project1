@@ -3,8 +3,7 @@
 
     <h1>{{title}}</h1>
 
-
-{{response}}
+<img class="place-pic" v-bind:src="info" v-bind:alt="info.alt">
 
 
 
@@ -32,12 +31,23 @@
           Authorization: "563492ad6f9170000100000133f51eab663d4ca49c54c50c4e39bc80"
           },
         })
-        .then(response => (this.info = response.data.photos.src.landscape))
-        console.log(response);
+        .then(response => {
+          this.info = response.data.photos[0].src.landscape
+          console.log(response.data.photos[0].src.landscape)
+        })
     }
   }
 
 </script>
 <style>
+
+.place-pic {
+  width: 580px;
+  height: auto;
+  align-content: center;
+  margin: 20px;
+}
+
+
 
 </style>

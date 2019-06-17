@@ -54,6 +54,10 @@
     width: 220px;
   }
 
+  .contact button {
+    width: 150px;
+  }
+
   .contact form .form-control {
     margin-bottom: 18px;
   }

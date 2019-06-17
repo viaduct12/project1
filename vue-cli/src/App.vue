@@ -10,12 +10,12 @@
 
       <router-link tag="li" class="col" class-active="active" to="/things" exact>things</router-link>
       <router-link tag="li" class="col" class-active="active" to="/weather" exact>weather</router-link>
-<router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
+      <router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
     </nav>
 
     <router-view></router-view>
     <footer class="fixed-bottom">
-      &copy; LMN Travel 
+      &copy; LMN Travel
       <img src="./assets/lmn-logo.png">
     </footer>
   </div>
@@ -63,9 +63,11 @@
   }
 
 
-img {
-  width: 170px;
-  height: auto;
-}
+  img {
+    width: 170px;
+    height: auto;
+  }
+
+
 
 </style>
