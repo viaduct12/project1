@@ -1,7 +1,7 @@
 <template>
   <div id="prices">
 
-<h1>{{msg}}</h1>
+  <h1>{{msg}}</h1>
 
 
 
@@ -10,7 +10,7 @@
 </template>
 <script>
   import axios from 'axios'
-
+  import VueAxios from 'vue-axios'
 
 export default {
    name: 'prices',
@@ -19,6 +19,9 @@ export default {
 
       msg: "Prices Page"
     }
+  },
+  mounted () {
+    
   }
 }
 </script>

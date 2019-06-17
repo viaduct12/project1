@@ -1,10 +1,7 @@
 <template>
   <div id="things">
 
-<h1>{{info}}</h1>
-
-
-
+  <h1>{{info}}</h1>
     
   </div>
 </template>
@@ -12,8 +9,9 @@
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+
 export default{
-  name: "app",
+  name: "things",
   data () {
     return {
       videoId : [],
@@ -30,15 +28,13 @@ export default{
     }
   })
   .then(response => {
-      // console.log("hello");
+      
       var results = response;
       console.log(results);
       
-        // console.log("argh");
-        for (var i = 0; i < 4; i++) {
-          // console.log(i, "wtf man");
+        for (var i = 0; i < 4; i++) {      
           this.videoId.push("https://www.youtube.com/watch?v=" + results.data.items[i].id.videoId);
-          // console.log(videoId);
+
         }
     })
   }
