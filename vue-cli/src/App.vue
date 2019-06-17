@@ -41,6 +41,7 @@
     margin-top: 60px;
   }
 
+
   h1,
   h2 {
     font-weight: normal;

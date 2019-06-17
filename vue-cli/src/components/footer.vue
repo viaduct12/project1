@@ -12,7 +12,7 @@ export default {
 <style>
 
 img {
-    width: 120px;
+    width: 75px;
     height: auto;
   }
 
