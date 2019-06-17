@@ -6,8 +6,9 @@
     <div>Now: {{ $date(new Date()) }}</div>
 
 
+
     <p>{{question}}</p>
-    <input type="text" value="">
+    <input class="question" type="text" value="">
 
 
 
@@ -34,6 +35,12 @@
 </script>
 <style lang="scss">
 
+.question {
+ margin: 20px;
+ height: auto;
+ width: 250px;
+ text-align: center;
+}
 
 
 

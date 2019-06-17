@@ -12,7 +12,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.use(BootstrapVue);
 
+import Footer from './components/footer.vue';
 
+Vue.component('app-footer', Footer);
 
 Vue.use(VueDateFns);
 

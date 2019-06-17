@@ -14,14 +14,12 @@
     </nav>
 
     <router-view></router-view>
-    <footer class="fixed-bottom">
-      &copy; LMN Travel
-      <img src="./assets/lmn-logo.png">
-    </footer>
+  <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'app',
     data() {
@@ -60,12 +58,6 @@
 
   a {
     color: #42b983;
-  }
-
-
-  img {
-    width: 170px;
-    height: auto;
   }
 
 
