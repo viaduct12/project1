@@ -14,6 +14,10 @@
     </nav>
 
     <router-view></router-view>
+    <footer class="fixed-bottom">
+      &copy; LMN Travel 
+      <img src="./assets/lmn-logo.png">
+    </footer>
   </div>
 </template>
 
@@ -57,5 +61,11 @@
   a {
     color: #42b983;
   }
+
+
+img {
+  width: 170px;
+  height: auto;
+}
 
 </style>
