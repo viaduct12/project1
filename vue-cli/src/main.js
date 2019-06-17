@@ -5,11 +5,21 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
 import VueDateFns from "vue-date-fns";
- 
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+
+Vue.use(BootstrapVue);
+
+
+
 Vue.use(VueDateFns);
 
-
 Vue.use(Vuex)
+
+// global node.js variables which we can access our variables 
+// Axios.defaults.baseURL = process.env.API_ENDPOINT;
 
 
 Vue.use(VueAxios, axios)
