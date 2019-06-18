@@ -3,7 +3,7 @@
 
     <h1>{{title}}</h1>
 
-    <!-- <div class="contact">
+    <div class="contact">
       <form>
         <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
     <div class="mt-2">Value: {{ text }}</div>
@@ -21,7 +21,7 @@
           <button class="btn btn-primary btn-block">Submit</button>
         </div>
       </form>
-    </div> -->
+    </div>
 
 
   </div>
