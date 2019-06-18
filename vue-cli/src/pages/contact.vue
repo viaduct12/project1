@@ -5,16 +5,14 @@
 
     <div class="contact">
       <form>
-        <div class="form-group">
-          <div class="input-group-prepend">
+        <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
+    <div class="mt-2">Value: {{ text }}</div>
+    <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
+    <div class="mt-2">Value: {{ text }}</div>
 
             <input type="text" class="form-control" name="">
           </div>
-          <div class="input-group-prepend">
-
-            <input type="text" class="form-control" name="">
-          </div>
-          <div class="input-group-prepend">
+          <div class="input-group">
 
             <textarea class="form-control">
 
@@ -36,7 +34,7 @@
     name: 'contact',
     data() {
       return {
-
+        text: '',
         title: "Contact"
       }
     }
@@ -44,11 +42,14 @@
 
 </script>
 <style scoped>
-  .contact form {
 
-    margin: 32px auto;
 
-  }
+
+.input-group {
+  width: 300px;
+    align-content: center;
+}
+  
 
   .contact input {
     width: 220px;
