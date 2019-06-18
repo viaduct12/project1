@@ -3,7 +3,11 @@
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
   "license": "MIT",
+  "homepage": "https://viaduct12.github.io/project1",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
