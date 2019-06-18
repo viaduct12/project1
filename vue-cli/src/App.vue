@@ -10,18 +10,16 @@
 
       <router-link tag="li" class="col" class-active="active" to="/things" exact>things</router-link>
       <router-link tag="li" class="col" class-active="active" to="/weather" exact>weather</router-link>
-<router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
+      <router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
     </nav>
 
     <router-view></router-view>
-    <footer class="fixed-bottom">
-      &copy; LMN Travel 
-      <img src="./assets/lmn-logo.png">
-    </footer>
+  <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'app',
     data() {
@@ -43,6 +41,7 @@
     margin-top: 60px;
   }
 
+
   h1,
   h2 {
     font-weight: normal;
@@ -63,9 +62,5 @@
   }
 
 
-img {
-  width: 170px;
-  height: auto;
-}
 
 </style>
