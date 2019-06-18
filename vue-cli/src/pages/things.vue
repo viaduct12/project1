@@ -1,22 +1,27 @@
+
 <template>
-  <div id="things">
-
-<h1>{{info}}</h1>
-
-
-
+  <div id="app">
+    {{info}}
     
+    <youtube :video-id="videoId"></youtube>
+
   </div>
 </template>
-<script>
 
+<script>
+import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+
+Vue.use(VueYouTubeEmbed)
+
 export default{
   name: "app",
   data () {
     return {
-      videoId : [],
+      videoIds : [],
+      videoId:'videoId',
       info: "not working help"
     }
   },
@@ -30,21 +35,44 @@ export default{
     }
   })
   .then(response => {
-      // console.log("hello");
       var results = response;
       console.log(results);
-      
-        // console.log("argh");
         for (var i = 0; i < 4; i++) {
-          // console.log(i, "wtf man");
-          this.videoId.push("https://www.youtube.com/watch?v=" + results.data.items[i].id.videoId);
-          // console.log(videoId);
+          // this.videoIds.push("https://www.youtube.com/watch?v=" + results.data.items[i].id.videoId);
+          this.videoIds.push(results.data.items[i].id.videoId);
         }
+
+        this.videoId = this.videoIds.pop();      
     })
   }
 }
 </script>
-<style>
 
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
 </style>
-
