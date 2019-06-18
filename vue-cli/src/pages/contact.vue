@@ -6,22 +6,24 @@
     <div class="contact">
       <form>
         <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-    <div class="mt-2">Value: {{ text }}</div>
-    <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-    <div class="mt-2">Value: {{ text }}</div>
+        <div class="mt-2">Value: {{ text }}</div>
+        <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
+        <div class="mt-2">Value: {{ text }}</div>
 
-            <input type="text" class="form-control" name="">
-          </div>
-          <div class="input-group">
+        <input type="text" class="form-control" name="">
+   
+    <div class="input-group">
 
-            <textarea class="form-control">
+      <textarea class="form-control">
 
 		 				</textarea>
-          </div>
-          <button class="btn btn-primary btn-block">Submit</button>
-        </div>
-      </form>
     </div>
+    <button class="btn btn-primary btn-block">Submit</button>
+ 
+  </form>
+ </div>
+ </div>
+
 
 
   </div>
@@ -42,14 +44,11 @@
 
 </script>
 <style scoped>
-
-
-
-.input-group {
-  width: 300px;
+  .input-group {
+    width: 300px;
     align-content: center;
-}
-  
+  }
+
 
   .contact input {
     width: 220px;
