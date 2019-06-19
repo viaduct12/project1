@@ -9,6 +9,7 @@ import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+
 import moment from 'moment';
 
 Vue.prototype.moment = moment
@@ -22,7 +23,8 @@ Vue.component('app-footer', Footer);
 
 Vue.use(VueDateFns);
 
-Vue.use(Vuex)
+ Vue.use(Vuex)
+
 
 
 Vue.use(VueAxios, axios)
