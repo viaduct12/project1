@@ -17,22 +17,17 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueYouTubeEmbed from 'vue-youtube-embed'
-import prices from "./prices"
-
 
 Vue.use(VueYouTubeEmbed)
 
 export default{
   name: "app",
-  components: {
-    prices
-  },
   data () {
     return {
       videoIds : [],
       videoId:'videoId',
       info: "not working help",
-      queryCountry: "madrid" //this.city
+      queryCountry: this.$store.getters.city //this.city
     }
   },
   mounted (){
