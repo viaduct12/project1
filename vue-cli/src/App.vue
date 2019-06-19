@@ -22,9 +22,16 @@
 
   export default {
     name: 'app',
+
     data() {
       return {
-        msg: 'Welcome to our LMN Travel App'
+        msg: 'Welcome to our LMN Travel App', 
+      home: {},
+      photos: {},
+      prices: {},
+      weather: {},
+      things: {}
+   
       }
     }
   }

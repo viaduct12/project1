@@ -32,39 +32,25 @@
   import axios from 'axios'
 
 
+
+
   export default {
     name: 'contact',
     data() {
       return {
-        text: '',
-        title: "Contact"
+         title: "Contact",
+         text: '',
+       
       }
     }
   }
 
 </script>
 <style scoped>
-  .input-group {
-    width: 300px;
-    align-content: center;
-  }
+  
 
 
-  .contact input {
-    width: 220px;
-  }
 
-  .contact button {
-    width: 150px;
-  }
 
-  .contact form .form-control {
-    margin-bottom: 18px;
-  }
-
-  .contact form textarea {
-    min-height: 220px;
-    width: 200px;
-  }
 
 </style>

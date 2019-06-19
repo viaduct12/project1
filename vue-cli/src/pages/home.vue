@@ -9,7 +9,9 @@
 
     <p>{{question}}</p>
     <!-- <input class="question" type="text" value=""> -->
-    <travels @inputData="updateMessage" />
+    <userInput @inputData="updateMessage" />
+  
+
 
 
 
@@ -17,12 +19,14 @@
 </template>
 <script>
   import moment from 'moment';
-  import travels from "../components/travels.vue";
+  import Results from "../components/Results.vue"
+  import userInput from "../components/userInput.vue";
 
   export default {
     name: 'home',
     components: {
-      travels
+     Results,
+      userInput
     },
     data() {
       return {
@@ -30,16 +34,16 @@
         question: "Where would you like to go?",
         message: 'Current Time:',
         currentTime: null,
-        city: ""
+        childData: ""
       }
     },
     methods: {
       updateCurrentTime() {
         this.currentTime = moment().format('LTS');
       },
-      updateMessage(variable){
-        this.city = variable;
-      },
+      updateMessage(variable) {
+        this.childData = variable;
+      }
     },
     created() {
       this.currentTime = moment().format('LTS');
@@ -74,6 +78,7 @@
 
   .time {
     font-size: 7em;
+    font-weight: bold;
   }
 
   p {
