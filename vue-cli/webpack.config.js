@@ -93,8 +93,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-        ? '/project1/'
-        : '/'
+       
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -104,7 +103,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: true
+      // minimize: true
     })
   ])
 }
