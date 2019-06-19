@@ -10,19 +10,28 @@
 
       <router-link tag="li" class="col" class-active="active" to="/things" exact>things</router-link>
       <router-link tag="li" class="col" class-active="active" to="/weather" exact>weather</router-link>
-<router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
+      <router-link tag="li" class="col" class-active="active" to="/contact" exact>contact</router-link>
     </nav>
 
     <router-view></router-view>
+  <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'app',
+
     data() {
       return {
-        msg: 'Welcome to our LMN Travel App'
+        msg: 'Welcome to our LMN Travel App', 
+      home: {},
+      photos: {},
+      prices: {},
+      weather: {},
+      things: {}
+   
       }
     }
   }
@@ -38,6 +47,7 @@
     color: #2c3e50;
     margin-top: 60px;
   }
+
 
   h1,
   h2 {
@@ -57,5 +67,7 @@
   a {
     color: #42b983;
   }
+
+
 
 </style>
