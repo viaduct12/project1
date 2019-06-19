@@ -8,8 +8,8 @@
     </section>
 
     <p>{{question}}</p>
-    <input class="question" type="text" value="">
-
+    <!-- <input class="question" type="text" value=""> -->
+    <travels @inputData="updateMessage" />
 
 
 
@@ -17,21 +17,29 @@
 </template>
 <script>
   import moment from 'moment';
+  import travels from "../components/travels.vue";
 
   export default {
     name: 'home',
+    components: {
+      travels
+    },
     data() {
       return {
         msg: "Home Page",
         question: "Where would you like to go?",
         message: 'Current Time:',
-        currentTime: null
+        currentTime: null,
+        city: ""
       }
     },
     methods: {
       updateCurrentTime() {
         this.currentTime = moment().format('LTS');
-      }
+      },
+      updateMessage(variable){
+        this.city = variable;
+      },
     },
     created() {
       this.currentTime = moment().format('LTS');
