@@ -31,7 +31,28 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false;
 
+export const store = new Vuex.Store({
+  state: {
+    city: ''
+  },
+  mutations: {
+    changeCity (state, payload) {
+      // console.log(payload);
+      state.city = payload.newCity
+    }
+  },
+  getters: 
+  {
+    city: state => state.city 
+  }
+})
+
+
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount("#app");
+
+
+
