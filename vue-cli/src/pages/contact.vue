@@ -51,7 +51,6 @@
     position: relative;
     margin: 5px;
     padding: 5px;
-   
   
   }
 
