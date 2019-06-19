@@ -40,6 +40,7 @@ export const store = new Vuex.Store({
       // console.log(payload);
       state.city = payload.newCity
     }
+
   },
   getters: 
   {
@@ -51,6 +52,7 @@ export const store = new Vuex.Store({
 new Vue({
   router,
   store,
+  moment,
   render: h => h(App)
 }).$mount("#app");
 
