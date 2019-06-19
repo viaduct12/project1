@@ -33,18 +33,30 @@ Vue.config.productionTip = false;
 
 export const store = new Vuex.Store({
   state: {
-    city: ''
+    city: '',
+    flightInfo: {
+      originCode: '',
+      destinationCode: '',
+      dateCode: ''
+    }
   },
   mutations: {
     changeCity (state, payload) {
-      // console.log(payload);
       state.city = payload.newCity
+    },
+    changeFlightInfo(state, payload){
+      state.flightInfo = payload.newFlightInfo  
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 20a097a8b71b1639483a773c46690f9213843cc1
   },
   getters: 
   {
-    city: state => state.city 
+    city: state => state.city,
+    flightInfo: state => state.flightInfo,
   }
 })
 

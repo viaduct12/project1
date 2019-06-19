@@ -2,9 +2,13 @@
 <template>
   <div id="app">
     {{info}}
-    
-    <youtube :video-id="videoId"></youtube>
 
+    <!-- <div v-for="index in videoIds">     -->
+    <youtube :video-id="videoId"></youtube>
+    <!-- <youtube :video-id="videoId"></youtube> -->
+    <!-- <youtube :video-id="videoId"></youtube> -->
+    <!-- <youtube :video-id="videoId"></youtube> -->
+    <!-- </div> -->
   </div>
 </template>
 
@@ -22,15 +26,16 @@ export default{
     return {
       videoIds : [],
       videoId:'videoId',
-      info: "not working help"
+      info: "not working help",
+      queryCountry: this.$store.getters.city //this.city
     }
   },
   mounted (){
-
+    console.log(this.queryCountry, "my cityyyyyy!");
     axios.get('https://www.googleapis.com/youtube/v3/search', {
       params: {
       part: "snippet, id",
-      q: "travel guide madrid",
+      q: "travel guide " + this.queryCountry,
       key: "AIzaSyBGnNxm3xCX-HWVQrxhPk-dfEiZAOx_FVQ"
     }
   })
@@ -42,7 +47,7 @@ export default{
           this.videoIds.push(results.data.items[i].id.videoId);
         }
 
-        this.videoId = this.videoIds.pop();      
+        this.videoId = this.videoIds[0];      
     })
   }
 }
