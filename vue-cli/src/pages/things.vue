@@ -1,19 +1,27 @@
 
 <template>
+  <div class="hello">
+    <h1>{{msg}}</h1>
+
+    <div class="google-map" :id="mapName">
+      <GmapMap
+        :center="{lat:40.7127753, lng:-74.0059728}"
+        :zoom="7"
+        map-type-id="terrain"
+        style="width: 500px; height: 300px"
+      >
+        <GmapMarker
+          :key="index"
+          v-for="(m, index) in markers"
+          :position="m.position"
+          :clickable="true"
+          :draggable="true"
+          @click="center=m.position"
+        />
+      </GmapMap>
+
   <div id="app">
     {{info}}
-    <!-- <div id="video-Container"> -->
-      <!-- <div v-for="index in videoIds">     -->
-      <!-- <youtube :video-id="videoId1"></youtube>
-      <youtube :video-id="videoId2"></youtube>
-      <youtube :video-id="videoId3"></youtube>
-      <youtube :video-id="videoId4"></youtube> -->
-      <!-- <youtube :video-id="videoId"></youtube> -->
-      <!-- <youtube :video-id="videoId"></youtube> -->
-      <!-- <youtube :video-id="videoId"></youtube> -->
-      <!-- </div> -->
-    <!-- </div> -->
-
     <div class="row">
       <div class="column">
         <youtube :video-id="videoId1"></youtube>
@@ -43,20 +51,38 @@
         <youtube :video-id="videoId4"></youtube>
       </div>
     </div>
-
-    
   </div>
 </template>
 
 <script>
-import Vue from "vue";
+
 import axios from "axios";
-import VueAxios from "vue-axios";
-import VueYouTubeEmbed from "vue-youtube-embed";
+import GoogleMapsLoader from "google-maps";
+
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
 Vue.use(VueYouTubeEmbed);
 
 export default {
+  name: "google-map",
+  props: ["name"],
+  data: function() {
+    return {
+      mapName: this.name + "-map"
+    };
+  },
+  mounted: function() {
+    const element = document.getElementById(this.mapName);
+    const options = {
+      zoom: 14,
+      center: new google.maps.LatLng(40.7127753, -74.0059728)
+    };
+    const map = new google.maps.Map(element, options);
+
+export default{
   name: "app",
   data() {
     return {
@@ -95,6 +121,16 @@ export default {
   }
 };
 </script>
+<style scoped>
+.google-map {
+  width: 475px;
+  height: 275px;
+  margin: 0 auto;
+  margin-right: 10px;
+  background: gray;
+  border-radius: 25px;
+}
+</style>
 
 <style lang="scss">
 #app {
