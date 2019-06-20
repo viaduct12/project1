@@ -22,10 +22,17 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
+  import axios from 'axios';
+  import VueAxios from 'vue-axios';
+  // import $ from "jquery";
+  // import travels from "../components/travels.vue";
+=======
 import axios from "axios";
 import VueAxios from "vue-axios";
 //importing google-map
 import GoogleMapsLoader from "google-maps";
+>>>>>>> 392706a06633021d4da67781ea964da1c34117c3
 
 export default {
   name: "prices",

@@ -47,10 +47,18 @@
       <!-- div space left and right videos apart -->
       <div class="column" id=" space-LR-videos"></div>
 
+<<<<<<< HEAD
+
+  <h4>Videos on: </h4>
+    <youtube :video-id="videoId"></youtube>
+    
+
+=======
       <div class="column">
         <youtube :video-id="videoId4"></youtube>
       </div>
     </div>
+>>>>>>> 392706a06633021d4da67781ea964da1c34117c3
   </div>
 </template>
 
@@ -86,12 +94,18 @@ export default{
   name: "app",
   data() {
     return {
+<<<<<<< HEAD
+      videoIds : [],
+      videoId:'videoId',
+      info: "",
+=======
       videoIds: [],
       videoId1: "videoId",
       videoId2: "",
       vvideoId3: "",
       videoId4: "",
       info: "Suggested Videos to Assist Your Travels",
+>>>>>>> 392706a06633021d4da67781ea964da1c34117c3
       queryCountry: this.$store.getters.city //this.city
     };
   },
@@ -142,16 +156,24 @@ export default{
   margin-top: 60px;
 }
 
+<<<<<<< HEAD
+h1, h2, h4{
+=======
 h1,
 h2 {
+>>>>>>> 392706a06633021d4da67781ea964da1c34117c3
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+h4 {
+  font-size: 34px;
+  color: #5eabe3;
+  margin: 20px;
+  
 }
 
+<<<<<<< HEAD
+=======
 li {
   display: inline-block;
   margin: 0 10px;
@@ -194,4 +216,5 @@ a {
 }
 
 
+>>>>>>> 392706a06633021d4da67781ea964da1c34117c3
 </style>

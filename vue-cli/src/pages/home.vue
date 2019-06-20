@@ -77,13 +77,14 @@
   }
 
   .time {
-    font-size: 7em;
+    font-size: 8em;
     font-weight: bold;
+    letter-spacing: -5px;
   }
 
   p {
     color: #ffffff;
-    font-size: 34px;
+    font-size: 54px;
     font-weight: bold;
   }
 
