@@ -5,8 +5,8 @@
 
       <!-- <router-link tag="li" class="col" class-active="active" to="/" exact>MAIN</router-link> -->
       <router-link tag="li" class="col" class-active="active" to="/home" exact>home</router-link>
-      <router-link tag="li" class="col" class-active="active" to="/photo" exact>photo</router-link>
       <router-link tag="li" class="col" class-active="active" to="/prices" exact>prices</router-link>
+      <router-link tag="li" class="col" class-active="active" to="/photo" exact>photo</router-link>
 
       <router-link tag="li" class="col" class-active="active" to="/things" exact>things</router-link>
       <router-link tag="li" class="col" class-active="active" to="/weather" exact>weather</router-link>

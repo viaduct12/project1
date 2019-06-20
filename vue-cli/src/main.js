@@ -47,11 +47,7 @@ export const store = new Vuex.Store({
     changeFlightInfo(state, payload){
       state.flightInfo = payload.newFlightInfo  
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 20a097a8b71b1639483a773c46690f9213843cc1
   },
   getters: 
   {

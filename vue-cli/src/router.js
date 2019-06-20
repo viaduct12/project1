@@ -19,15 +19,16 @@ export default new Router({
       name: "home",
       component: home
     },
-    {
-      path: "/photo",
-      name: "photo",
-      component: photo
-    },
+    
     {
       path: "/prices",
       name: "prices",
       component: prices
+    },
+    {
+      path: "/photo",
+      name: "photo",
+      component: photo
     },
     {
       path: "/things",

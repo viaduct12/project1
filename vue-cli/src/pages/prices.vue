@@ -11,7 +11,7 @@
 <script>
   import axios from 'axios';
   import VueAxios from 'vue-axios';
-  import $ from "jquery";
+  // import $ from "jquery";
   // import travels from "../components/travels.vue";
 
 export default {

@@ -3,12 +3,11 @@
   <div id="app">
     {{info}}
 
-    <!-- <div v-for="index in videoIds">     -->
+
+  <h4>Videos on: </h4>
     <youtube :video-id="videoId"></youtube>
-    <!-- <youtube :video-id="videoId"></youtube> -->
-    <!-- <youtube :video-id="videoId"></youtube> -->
-    <!-- <youtube :video-id="videoId"></youtube> -->
-    <!-- </div> -->
+    
+
   </div>
 </template>
 
@@ -26,7 +25,7 @@ export default{
     return {
       videoIds : [],
       videoId:'videoId',
-      info: "not working help",
+      info: "",
       queryCountry: this.$store.getters.city //this.city
     }
   },
@@ -63,21 +62,15 @@ export default{
   margin-top: 60px;
 }
 
-h1, h2 {
+h1, h2, h4{
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+h4 {
+  font-size: 34px;
+  color: #5eabe3;
+  margin: 20px;
+  
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
