@@ -84,6 +84,7 @@
   p {
     color: #ffffff;
     font-size: 34px;
+    font-weight: bold;
   }
 
   .question {

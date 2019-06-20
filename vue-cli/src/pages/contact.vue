@@ -3,26 +3,27 @@
 
     <h1>{{title}}</h1>
 
-    <div class="contact">
-      <form>
-        <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-        <div class="mt-2">Value: {{ text }}</div>
-        <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-        <div class="mt-2">Value: {{ text }}</div>
+    <div>
+      <b-card-group deck>
+        <b-card title="" header-tag="header" footer-tag="footer">
+          <h6 slot="header" class="mb-0">Your Information</h6>
+          <b-card-text>
+            <h5 class="form-info">Name: </h5>
+            <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
+            <h5 class="form-info">Email: </h5>
+            <b-form-input v-model="text" placeholder="Enter your email"></b-form-input>
 
-        <input type="text" class="form-control" name="">
-   
-    <div class="input-group">
+            <h5 class="form-info">Comments: </h5>
+            <b-form-textarea id="textarea" v-model="text" placeholder="Enter your comments here..." rows="3"
+              max-rows="6">
+            </b-form-textarea>
 
-      <textarea class="form-control">
-
-		 				</textarea>
+          </b-card-text>
+          <b-button class="submit" href="#">Submit</b-button>
+        </b-card>
+      </b-card-group>
     </div>
-    <button class="btn btn-primary btn-block">Submit</button>
- 
-  </form>
- </div>
- </div>
+  </div>
 
 
 
@@ -32,25 +33,35 @@
   import axios from 'axios'
 
 
-
-
   export default {
     name: 'contact',
     data() {
       return {
-         title: "Contact",
-         text: '',
-       
+        title: "Contact",
+        text: '',
+
       }
     }
   }
 
 </script>
 <style scoped>
+
+  div {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
   
+  }
+
+  .form-info {
+    text-align: left;
+    margin: 20px;
+  }
 
 
-
-
+  .submit {
+    background-color: #5eabe3;
+  }
 
 </style>

@@ -2,11 +2,11 @@
   <div id="photo">
 
     
-      <p class="picked">you picked: {{msg}}</p>
+      <h4 class="picked">Your Destination: {{msg}}</h4>
   
 
 
-    <img class="place-pic" v-bind:src="info">
+    <img id="background" class="place-pic" v-bind:src="info">
 
 
 
@@ -56,13 +56,22 @@
 
 .picked {
   font-size: 34px;
-  color: black;
+  color: #5eabe3;
 }
   .place-pic {
-    width: 580px;
+    width: 680px;
     height: auto;
     align-content: center;
     margin: 20px;
   }
+
+#background {
+    background-size: cover;
+    height: 450px;
+    width: 75%;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
 
 </style>
